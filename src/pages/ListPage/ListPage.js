@@ -1,27 +1,26 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { listPageAction } from '../../redux/movie/actions';
+import { getFavoriteMovies } from '../../redux/movie/selectors';
 import './ListPage.css';
 
-class ListPage extends Component {
-    state = {
-        movies: [
-            { title: 'The Godfather', year: 1972, imdbID: 'tt0068646' }
-        ]
-    }
-    componentDidMount() {
-        const id = this.props.match.params;
-        console.log(id);
-        // TODO: запрос к сервер на получение списка
-        // TODO: запросы к серверу по всем imdbID
-    }
-    render() { 
+const ListPage = () => {
+    const movies = useSelector(getFavoriteMovies)
+    const dispatch = useDispatch()
+
+    useEffect(() => {
+        dispatch(listPageAction())
+    })
+
         return (
             <div className="list-page">
                 <h1 className="list-page__title">Мой список</h1>
                 <ul>
-                    {this.state.movies.map((item) => {
+                    {movies.map((item) => {
                         return (
                             <li key={item.imdbID}>
-                                <a href="https://www.imdb.com/title/tt0068646/" target="_blank">{item.title} ({item.year})</a>
+                                <a href="https://www.imdb.com/title/tt0068646/" target="blank">{item.Title} ({item.Year})</a>
                             </li>
                         );
                     })}
@@ -29,6 +28,5 @@ class ListPage extends Component {
             </div>
         );
     }
-}
  
 export default ListPage;

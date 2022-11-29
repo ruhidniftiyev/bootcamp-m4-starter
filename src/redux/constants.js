@@ -1,0 +1,11 @@
+export const SEARCH_MOVIE = 'SEARCH_MOVIE';
+export const REQUEST_MOVIE = 'REQUEST_MOVIE';
+export const FETCH_MOVIE = 'FETCH_MOVIE';
+export const ADD_MOVIE = 'ADD_MOVIE';
+export const SHOW_MODAL = 'SHOW_MODAL';
+export const HIDE_MODAL = 'HIDE_MODAL';
+export const DELETE_MOVIE = 'DELETE_MOVIE';
+export const ADD_LIST = 'ADD_LIST';
+export const POST_MOVIE = 'POST_MOVIE';
+export const LIST_PAGE = 'LIST_PAGE';
+export const GET_ID = 'GET_ID'

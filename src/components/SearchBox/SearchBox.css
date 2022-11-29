@@ -39,3 +39,8 @@
     opacity: 0.5;
     cursor: not-allowed;
 }
+
+.search-box__form-input:focus {
+    outline: none;
+    border: 2px solid black;
+}

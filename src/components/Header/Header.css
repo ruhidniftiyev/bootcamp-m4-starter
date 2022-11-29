@@ -1,11 +1,27 @@
 .header {
-    background: #496DDB;
-    padding: 20px calc(50% - 500px) 10px;
+  background: #496ddb;
+  padding: 20px calc(50% - 500px) 10px;
+  display: flex;
+  box-sizing:content-box;
+  justify-content: space-between;
+  height: 70px;
 }
 
 .header__title {
-    font-family: 'Luckiest Guy', cursive;
-    color: #FFEEDB;
-    font-size: 45px;
-    margin-left: 40px;
+  font-family: 'Luckiest Guy', cursive;
+  color: #ffeedb;
+  font-size: 45px;
+  margin-top: 7px;
 }
+
+.main-page__search-box {
+  margin-bottom: 20px;
+  margin-right: 60px;
+}
+
+.header__favorites-btn-block {
+  margin-left: 250px;
+  margin-top: 8px;
+}
+
+
